@@ -1,14 +1,15 @@
-from func_for_decor import search_in_soup
+from Habr import search_in_soup
 
 def main():
  
-    keywords = ['python', 'java', 'Unix']
+    keywords = ['месяц', 'java']
     for word in keywords:
+        print(word)
         search_in_soup(word)
     
 
-
-
-main()
+if __name__ == '__main__':
+    
+    main()
 
 

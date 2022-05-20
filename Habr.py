@@ -1,10 +1,12 @@
 import bs4
 import requests
-from logger_for_decor import logger
+
+from path_to_log import logger
+
 
 url = 'https://habr.com'
-headers = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0'}
-
+# headers = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0'}
+headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36'}
 
 def resp(url_add=''):
 
@@ -14,8 +16,7 @@ def resp(url_add=''):
     
     return text
 
-
-@logger
+@logger('log')
 def search_in_soup(word):
     
     amount = 0
